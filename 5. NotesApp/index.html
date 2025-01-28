@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <button class="button" onclick="clickHandler()">CLICK ME</button>
+        <div class="input"></div>
+
+    </div>
+
+    
+
+    <script>
+        const input = document.querySelector('.input');
+
+        function clickHandler() {
+            const wrapper = document.createElement('div');
+            const inputField = document.createElement('textarea');
+            const DelButton = document.createElement('button');
+
+            DelButton.innerHTML = "Delete Me!";
+            DelButton.onclick = (e) => {
+                input.removeChild(e.target.parentNode);
+            }
+
+            wrapper.classList.add('wrapper');
+
+            wrapper.appendChild(inputField);
+            wrapper.appendChild(DelButton);
+
+            input.appendChild(wrapper);
+        }
+    </script>
+</body>
+</html>
