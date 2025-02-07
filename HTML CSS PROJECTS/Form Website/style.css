@@ -35,3 +35,43 @@ title-small{
 label{
     font-size: 15px;
 }
+
+input , textarea , select{
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 15px;
+}
+input:focus{
+    outline-color: orange;
+}
+.button_control{
+    display: flex;
+    justify-content: end;
+}
+#button{
+    padding: 5px 10px;
+    background-color: red;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: transparent solid 2px;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+#button:hover{
+    cursor: pointer;
+    background-color: #ccc;
+    border: 2px solid red;
+    transform: scale(1.1);
+}
+.Address_control{
+    grid-column: span 2;
+}
+.Address_control textarea{
+    width: 100%;
+}
+@media (max-width: 460px){
+    .Address_control{
+        grid-column: span 1;
+    }
+};
